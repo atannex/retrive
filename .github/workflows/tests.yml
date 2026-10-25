@@ -32,6 +32,13 @@ jobs:
           extensions: pdo_sqlite, sqlite3, mbstring
           coverage: none
 
+      # Laravel 11 is past security support and every 11.x release carries an
+      # advisory, which Composer refuses by default. The packages still support
+      # it, so allow it here to keep testing that.
+      - name: Allow Laravel 11 despite advisories
+        if: matrix.laravel == '11.*'
+        run: composer config audit.block-insecure false
+
       - name: Install dependencies
         run: |
           composer require "illuminate/support:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --dev --no-interaction --no-update
