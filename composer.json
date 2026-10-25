@@ -31,6 +31,9 @@
         "laravel": {
             "providers": ["Atannex\\Retrive\\RetriveServiceProvider"],
             "aliases": { "Retrive": "Atannex\\Retrive\\Facades\\Retrive" }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
         }
     },
     "scripts": {
