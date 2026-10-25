@@ -1,0 +1,32 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use {{ model }};
+use Atannex\Retrive\Resource;
+use Illuminate\Database\Eloquent\Builder;
+
+/**
+ * Register in config/retrive.php ('resources'), then:
+ *
+ *     Retrive::for('{{ modelClass }}')->latest()->get(10);
+ */
+final class {{ class }} extends Resource
+{
+    protected string $model = {{ modelClass }}::class;
+
+    protected array $searchable = [];
+
+    protected array $filters = [];
+
+    protected array $sorts = [];
+
+    protected array $includes = [];
+
+    public function visible(Builder $query): void
+    {
+        //
+    }
+}

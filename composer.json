@@ -1,0 +1,42 @@
+{
+    "name": "atannex/retrive",
+    "description": "Data retrieval layer for Laravel Eloquent models: resource definitions, a fluent retriever, magic finders (getPostBySlug, getPostsByCategory…), request-driven filters, sorts and includes, visibility rules, hierarchy-aware relation filters, search, neighbours, related records and self-invalidating caching.",
+    "keywords": ["laravel", "eloquent", "repository", "query", "finder", "retrieval", "cache", "filters"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        { "name": "Atanga Leke Collins", "email": "atangageihlekecollins@gmail.com" }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/cache": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/events": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/pagination": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": { "Atannex\\Retrive\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Atannex\\Retrive\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Atannex\\Retrive\\RetriveServiceProvider"],
+            "aliases": { "Retrive": "Atannex\\Retrive\\Facades\\Retrive" }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": { "sort-packages": true },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
