@@ -1,5 +1,10 @@
 # atannex/retrive
 
+[![Tests](https://github.com/atannex/retrive/actions/workflows/tests.yml/badge.svg)](https://github.com/atannex/retrive/actions/workflows/tests.yml)
+[![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](composer.json)
+[![Laravel](https://img.shields.io/badge/Laravel-11%20%7C%2012-FF2D20?logo=laravel&logoColor=white)](composer.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
+
 A retrieval layer for Laravel Eloquent models. Describe each model once as a **resource**: how records are named, which ones the public may see, what to eager load, how to search, sort and filter them. Then retrieve them with magic finders or a fluent retriever.
 
 ```php
