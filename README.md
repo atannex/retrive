@@ -7,11 +7,3 @@ A single place for a Laravel app to fetch its records. For each model you descri
 ```bash
 composer require atannex/retrive
 ```
-
-## Documentation
-
-The full guide is in [docs/README.md](docs/README.md).
-
-## License
-
-MIT.
